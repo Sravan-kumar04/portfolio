@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ResumeCard = ({title,subTitle,result,des}) => {
+const ResumeCard = ({title,subTitle,result,des,myLink}) => {
+  
   return (
     <div className="w-full h-1/3 group flex">
       <div className="w-10 h-[6px] bgOpacity mt-16 relative">
@@ -22,11 +23,16 @@ const ResumeCard = ({title,subTitle,result,des}) => {
             <p className="px-4 py-2 text-designColor bg-black bg-opacity-25 rounded-lg flex justify-center items-center shadow-shadowOne text-sm font-medium">
               {result}
             </p>
+        
+           
           </div>
         </div>
         <p className="text-sm md:text-base font-medium text-gray-400 group-hover:text-gray-300 duration-300">
           {des}
         </p>
+         {myLink && (<a href={myLink}  target='_blank'>
+                <button>Click Here &rarr;</button>
+            </a>)}
       </div>
     </div>
   );

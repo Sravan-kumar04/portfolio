@@ -1,15 +1,20 @@
 import React from 'react'
 import { HiArrowRight } from "react-icons/hi";
+import { Link } from 'react-scroll';
 
-const Card = ({item:{title,des,icon}}) => {
+
+const Card = ({item:{title,des,icon,myLink}}) => {
   return (
-    <div className="w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
-      <div className="h-72 overflow-y-hidden">
+    <div className="w-full px-20 h-100 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
+      <div className="h-100 overflow-y-hidden">
         <div className="flex h-full flex-col gap-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-          <div className="w-10 h-8 flex flex-col justify-between">
+          <div className="w-10 h-20 flex flex-col justify-between">
         
             {icon ? (
+              <>
               <span className="text-5xl text-designColor">{icon}</span>
+              {/* <p>{myLink}</p> */}
+              </>
             ) : (
               <>
                 <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
@@ -25,7 +30,10 @@ const Card = ({item:{title,des,icon}}) => {
             </h2>
             <p className="base">{des}</p>
             <span className="text-2xl text-designColor">
-              <HiArrowRight />
+            <a href={myLink} target='_blank'>
+            <HiArrowRight />
+            </a>
+            
             </span>
           </div>
         </div>
