@@ -14,8 +14,8 @@ const Footer = () => {
           {/* <span className="bannerIcon">
             <FaTwitter />
           </span> */}
-          <a href="www.linkedin.com/in/tiprissravankumar" target='_blank'>
-          <span className="bannerIcon"  title='Instagram'>
+          <a href="https://www.linkedin.com/in/tiprissravankumar" target='_blank'>
+          <span className="bannerIcon"  title='LinkedIn'>
             <FaLinkedinIn />
           </span>
           </a>
